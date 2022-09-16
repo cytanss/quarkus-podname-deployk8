@@ -1,0 +1,7 @@
+bases:
+- ../../../base
+resources:
+- route.yaml
+replicas:
+- name: quarkus-podname
+  count: 3

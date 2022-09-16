@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: quarkus-podname
+  name: quarkus-podname-lb
+spec:
+  ports:
+  - name: web
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: quarkus-podname
+  sessionAffinity: None
+  type: LoadBalancer
